@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GLOWZ Jerky</title>
+  <meta name="description" content="Three generations, one family teriyaki marinade. Homemade beef jerky made fresh to order on Oʻahu. Kiawe Smoke, Teriyaki, Korean BBQ and more.">
+  <meta property="og:title" content="GLOWZ Jerky — Made in Hawaiʻi with Aloha">
+  <meta property="og:description" content="Homemade beef jerky, made fresh to order. Free Oʻahu delivery on 4+ bags.">
+  <meta property="og:image" content="img/glowz-hero.jpg">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌺</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Kaushan+Script&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ ANNOUNCEMENT BAR ============ -->
+<div class="announce">
+  <div class="announce__track">
+    <span>🏝️ Free Oʻahu delivery on 4+ bags</span>
+    <span>📦 Free USA shipping on 8+ bags</span>
+    <span>🔥 Members: buy 3, get 5% off · buy 7, get $25 off</span>
+    <span>🥩 Made fresh to order · ready in 1–2 weeks</span>
+    <span>🏝️ Free Oʻahu delivery on 4+ bags</span>
+    <span>📦 Free USA shipping on 8+ bags</span>
+    <span>🔥 Members: buy 3, get 5% off · buy 7, get $25 off</span>
+    <span>🥩 Made fresh to order · ready in 1–2 weeks</span>
+  </div>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="top">
+  <a href="#top" class="logo" aria-label="GLOWZ Jerky home">
+    <span class="logo__glowz">GLOWZ</span><span class="logo__flower">🌺</span>
+    <span class="logo__jerky">JERKY</span>
+  </a>
+  <nav class="nav__links" id="navLinks">
+    <a href="#shop">Shop</a>
+    <a href="#available">Available Now</a>
+    <a href="#best">Best Sellers</a>
+    <a href="#story">Our Story</a>
+    <a href="#rewards">Rewards</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+    🛍️ <span class="cart-btn__count" id="cartCount">0</span>
+  </button>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow">Homemade on Oʻahu · Since grandma's kitchen</p>
+      <h1 class="hero__title">
+        <span>Jerky with</span>
+        <span>a <em class="glow-word">GLOW</em>-up.</span>
+      </h1>
+      <p class="hero__sub">Three generations. One family teriyaki marinade. Smoky, sticky, peppery beef jerky made fresh to order — and gone way too fast.</p>
+      <div class="hero__cta">
+        <a href="#shop" class="btn btn--lava">Build your bag →</a>
+        <a href="#story" class="btn btn--ghost">Our story</a>
+      </div>
+      <ul class="hero__chips">
+        <li>✅ Made fresh to order</li>
+        <li>✅ Reduced-sodium &amp; sugar options</li>
+        <li>✅ Pay on pickup — cash, Venmo, Cash App</li>
+      </ul>
+    </div>
+    <div class="hero__art">
+      <div class="hero__card">
+        <img src="img/glowz-hero.jpg" alt="Stack of GLOWZ teriyaki beef jerky on a white plate with hibiscus and monstera leaves">
+      </div>
+      <div class="sticker sticker--price"><b>$25</b><small>per 4.5 oz bag</small></div>
+      <div class="sticker sticker--shaka">🤙</div>
+    </div>
+  </div>
+  <svg class="wave wave--bottom" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C240,90 480,0 720,30 C960,60 1200,10 1440,45 L1440,90 L0,90 Z"/></svg>
+</section>
+
+<!-- ============ FLAVOR TICKER ============ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    <span>Kiawe Smoke</span><i>✦</i><span>Teriyaki</span><i>✦</i><span>Korean BBQ</span><i>✦</i><span>Original</span><i>✦</i><span>Hickory Smoke</span><i>✦</i><span>Char Siu</span><i>✦</i><span>Old Fashion</span><i>✦</i><span>Ghost Pepper 🔥</span><i>✦</i><span>Carolina Reaper 🔥🔥</span><i>✦</i>
+    <span>Kiawe Smoke</span><i>✦</i><span>Teriyaki</span><i>✦</i><span>Korean BBQ</span><i>✦</i><span>Original</span><i>✦</i><span>Hickory Smoke</span><i>✦</i><span>Char Siu</span><i>✦</i><span>Old Fashion</span><i>✦</i><span>Ghost Pepper 🔥</span><i>✦</i><span>Carolina Reaper 🔥🔥</span><i>✦</i>
+  </div>
+</div>
+
+<!-- ============ FAVORITES ============ -->
+<section class="section section--cream" id="best">
+  <div class="container">
+    <p class="eyebrow eyebrow--dark">The people have spoken</p>
+    <h2 class="h2">Top 3 customer favorites</h2>
+    <p class="lede">The flavors that keep folks coming back. Rankings will update live from real orders once the shop opens.</p>
+    <div class="podium">
+      <article class="podium__card podium__card--1">
+        <div class="podium__rank">#1</div>
+        <span class="badge badge--gold">🏆 Best Seller</span>
+        <h3>Kiawe Smoke</h3>
+        <p>Low and slow island smoke from Hawaiʻi's own kiawe wood. Deep, savory, a little sweet.</p>
+        <button class="btn btn--sm btn--lava" data-quick="Kiawe Smoke">Add to bag</button>
+      </article>
+      <article class="podium__card podium__card--2">
+        <div class="podium__rank">#2</div>
+        <span class="badge">🌺 The OG family recipe</span>
+        <h3>Teriyaki</h3>
+        <p>Grandma's marinade, refined by Dad, perfected by Garrett. Where it all started.</p>
+        <button class="btn btn--sm btn--lava" data-quick="Teriyaki">Add to bag</button>
+      </article>
+      <article class="podium__card podium__card--3">
+        <div class="podium__rank">#3</div>
+        <span class="badge">🔥 Fan favorite</span>
+        <h3>Korean BBQ</h3>
+        <p>Garlicky, gingery, sesame-kissed — kalbi vibes in every chew.</p>
+        <button class="btn btn--sm btn--lava" data-quick="Korean BBQ">Add to bag</button>
+      </article>
+    </div>
+    <div class="more-flavors">
+      <span>Also on the menu:</span>
+      <button class="pill" data-quick="Original">Original</button>
+      <button class="pill" data-quick="Hickory Smoke">Hickory Smoke</button>
+      <button class="pill" data-quick="Char Siu">Char Siu</button>
+      <button class="pill" data-quick="Old Fashion">Old Fashion</button>
+      <button class="pill pill--mystery" data-quick="Mystery Bag">🎁 Mystery Bag</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SHOP / BUILDER ============ -->
+<section class="section section--dark" id="shop">
+  <div class="container">
+    <p class="eyebrow">Shop</p>
+    <h2 class="h2 h2--light">Build your bag</h2>
+    <p class="lede lede--light">Pick a flavor, choose your size, crank the heat. Every bag is made fresh for you — <strong>ready in about 1–2 weeks</strong>.</p>
+
+    <div class="builder">
+      <div class="builder__steps">
+        <div class="step">
+          <h3 class="step__title"><span>1</span> Choose your flavor</h3>
+          <div class="flavor-grid" id="flavorGrid"></div>
+        </div>
+
+        <div class="step">
+          <h3 class="step__title"><span>2</span> Pick a size</h3>
+          <div class="size-grid">
+            <label class="size">
+              <input type="radio" name="size" value="regular" checked>
+              <span class="size__box">
+                <b>Regular</b>
+                <small>4.5 oz</small>
+                <em>$25</em>
+              </span>
+            </label>
+            <label class="size">
+              <input type="radio" name="size" value="large">
+              <span class="size__box">
+                <span class="size__save">Save $5</span>
+                <b>Large</b>
+                <small>13.5 oz · 3 bags' worth</small>
+                <em>$70</em>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <div class="step">
+          <h3 class="step__title"><span>3</span> Bring the heat <small>(optional)</small></h3>
+          <div class="heat-grid">
+            <label class="chip"><input type="radio" name="heat" value="" checked><span>No heat</span></label>
+            <label class="chip"><input type="radio" name="heat" value="Black Pepper"><span>🌶️ Black Pepper</span></label>
+            <label class="chip"><input type="radio" name="heat" value="Ghost Pepper"><span>🔥 Ghost Pepper</span></label>
+            <label class="chip chip--reaper"><input type="radio" name="heat" value="Carolina Reaper"><span>🔥🔥 Carolina Reaper</span></label>
+          </div>
+          <div class="heat-meter" aria-hidden="true"><div class="heat-meter__fill" id="heatFill"></div></div>
+        </div>
+
+        <div class="step" id="healthStep">
+          <h3 class="step__title"><span>4</span> Lighten it up <small>(optional)</small></h3>
+          <div class="heat-grid">
+            <label class="chip"><input type="radio" name="health" value="" checked><span>Classic</span></label>
+            <label class="chip"><input type="radio" name="health" value="Reduced Sodium"><span>🧂 Reduced Sodium</span></label>
+            <label class="chip"><input type="radio" name="health" value="50% Less Sugar"><span>🍬 50% Less Sugar</span></label>
+            <label class="chip"><input type="radio" name="health" value="Reduced Sodium + 50% Less Sugar"><span>✅ Both</span></label>
+          </div>
+          <p class="note" id="healthNote">Available for Teriyaki, Kiawe Smoke, Hickory Smoke &amp; Old Fashion.</p>
+        </div>
+      </div>
+
+      <aside class="builder__preview">
+        <div class="bag" id="bagPreview">
+          <div class="bag__top"></div>
+          <div class="bag__label">
+            <div class="bag__brand">GLOWZ<span>🌺</span></div>
+            <div class="bag__flavor" id="pvFlavor">Kiawe Smoke</div>
+            <div class="bag__mods" id="pvMods">Classic</div>
+            <div class="bag__size" id="pvSize">4.5 oz</div>
+          </div>
+        </div>
+        <div class="qty">
+          <button type="button" id="qtyMinus" aria-label="Decrease quantity">−</button>
+          <output id="qtyVal">1</output>
+          <button type="button" id="qtyPlus" aria-label="Increase quantity">+</button>
+        </div>
+        <button class="btn btn--lava btn--block" id="addBtn">Add to bag — <span id="addPrice">$25</span></button>
+        <p class="note note--center">⏱️ Made to order · ready in ~1–2 weeks</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AVAILABLE NOW ============ -->
+<section class="section section--kraft" id="available">
+  <div class="container">
+    <p class="eyebrow eyebrow--dark">Can't wait 2 weeks?</p>
+    <h2 class="h2">Available now</h2>
+    <p class="lede">Already made, already bagged, ready to grab. When it's gone, it's gone — but you can always order it made-to-order.</p>
+    <div class="stock-grid" id="stockGrid"></div>
+  </div>
+</section>
+
+<!-- ============ DEALS ============ -->
+<section class="section section--lava">
+  <div class="container deals">
+    <div class="deal">
+      <div class="deal__big">5%<small>OFF</small></div>
+      <p><b>Buy 3 bags</b><br>Member mix &amp; match</p>
+    </div>
+    <div class="deal">
+      <div class="deal__big">$25<small>OFF</small></div>
+      <p><b>Buy 7 bags</b><br>Member mix &amp; match</p>
+    </div>
+    <div class="deal">
+      <div class="deal__big">🏝️<small>FREE</small></div>
+      <p><b>Oʻahu delivery</b><br>on 4+ bags</p>
+    </div>
+    <div class="deal">
+      <div class="deal__big">📦<small>FREE</small></div>
+      <p><b>USA shipping</b><br>on 8+ bags</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUR STORY ============ -->
+<section class="section section--cream story" id="story">
+  <div class="container story__grid">
+    <div class="story__photo">
+      <img src="img/jerky-plate.jpg" alt="A fresh batch of homemade GLOWZ beef jerky piled on a plate">
+      <span class="story__tape">a real batch, fresh outta the dehydrator</span>
+    </div>
+    <div class="story__copy">
+      <p class="eyebrow eyebrow--dark">Our story</p>
+      <h2 class="h2">Three generations.<br>One marinade.</h2>
+      <ol class="gens">
+        <li>
+          <span class="gens__who">Grandma</span>
+          <p>Created the original homemade teriyaki marinade for meat. The secret starts here.</p>
+        </li>
+        <li>
+          <span class="gens__who">Dad</span>
+          <p>Refined the family recipe over the years, adding his own personal touch.</p>
+        </li>
+        <li>
+          <span class="gens__who">Garrett</span>
+          <p>Carried on the tradition — and created reduced-sodium and reduced-sugar versions so more people can enjoy it.</p>
+        </li>
+      </ol>
+      <p>It actually started with backpacking. Garrett was dehydrating fruit for the trail when someone said, <em>“Why don't you try making beef jerky?”</em> So he did. Friends wanted some. Then their friends. A simple hobby turned into GLOWZ Jerky.</p>
+      <p class="signoff">Made in Hawaiʻi with aloha! 🤙<br><span>— Garrett L. (aka GLOWZ), Founder</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REWARDS ============ -->
+<section class="section section--dark" id="rewards">
+  <div class="container">
+    <p class="eyebrow">GLOWZ Members</p>
+    <h2 class="h2 h2--light">Eat jerky. Get paid in jerky.</h2>
+    <p class="lede lede--light">Free account. Lifetime rewards that never reset.</p>
+
+    <div class="rewards">
+      <div class="reward-card reward-card--wide">
+        <h3>🎯 $25 every 30 bags — forever</h3>
+        <p>Every regular bag = 1 credit. Every large bag = 3 credits. Hit 30, 60, 90… and each one drops a $25 credit in your account.</p>
+        <div class="calc">
+          <label for="credits">Slide to see your rewards: <b id="creditsVal">74</b> lifetime bag credits</label>
+          <input type="range" id="credits" min="0" max="150" value="74">
+          <div class="progress"><div class="progress__fill" id="progFill"></div>
+            <div class="progress__ticks"><span>0</span><span>30</span></div>
+          </div>
+          <p class="calc__out" id="calcOut"></p>
+        </div>
+      </div>
+      <div class="reward-card">
+        <h3>🤝 Refer a friend, earn $5</h3>
+        <p>Share your personal code. When a new friend completes their first order, $5 lands in your account.</p>
+        <div class="refcode">GLOWZ-<span>YOU</span></div>
+      </div>
+      <div class="reward-card">
+        <h3>🏆 Top 5 Leaderboards</h3>
+        <div class="tabs" role="tablist">
+          <button class="tab is-active" data-board="annual" role="tab">2027 Annual</button>
+          <button class="tab" data-board="alltime" role="tab">All-Time</button>
+        </div>
+        <ol class="board" id="board"></ol>
+        <p class="note">Annual Top 3 win prizes every Dec 31. Nicknames only — opt in if you want to show off.</p>
+      </div>
+    </div>
+    <div class="center"><a href="#contact" class="btn btn--lava" data-join>Join free — become a member</a></div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="section section--cream" id="reviews">
+  <div class="container">
+    <p class="eyebrow eyebrow--dark">Reviews</p>
+    <h2 class="h2">Tell us how it hit</h2>
+    <p class="lede">Customers have been coming back for years — now there's a place to say so. Leave a rating and it'll show here once approved.</p>
+    <div class="reviews">
+      <div class="review-list" id="reviewList">
+        <div class="review review--empty">
+          <div class="stars">☆☆☆☆☆</div>
+          <p>No reviews posted yet. Be the first to put some aloha on the board! 🤙</p>
+        </div>
+      </div>
+      <form class="review-form" id="reviewForm">
+        <h3>Leave a review</h3>
+        <div class="star-input" id="starInput" role="radiogroup" aria-label="Rating">
+          <button type="button" data-v="1" aria-label="1 star">★</button>
+          <button type="button" data-v="2" aria-label="2 stars">★</button>
+          <button type="button" data-v="3" aria-label="3 stars">★</button>
+          <button type="button" data-v="4" aria-label="4 stars">★</button>
+          <button type="button" data-v="5" aria-label="5 stars">★</button>
+        </div>
+        <input type="text" name="name" placeholder="Your name or nickname" required>
+        <select name="flavor" id="reviewFlavor"></select>
+        <textarea name="text" rows="3" placeholder="What did you think?" required></textarea>
+        <button class="btn btn--lava btn--block" type="submit">Submit review</button>
+        <p class="note" id="reviewMsg"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section section--kraft" id="contact">
+  <div class="container contact">
+    <div>
+      <p class="eyebrow eyebrow--dark">Talk story</p>
+      <h2 class="h2">Questions? Bulk order? Party platter?</h2>
+      <p class="lede">No account needed — just shoot us a message.</p>
+      <ul class="contact__list">
+        <li>📩 <a href="mailto:glowm6@proton.me">glowm6@proton.me</a></li>
+        <li>📍 Oʻahu, Hawaiʻi — pickup, local delivery &amp; USA shipping</li>
+        <li>💵 Cash · Venmo · Cash App — pay at pickup or delivery</li>
+      </ul>
+      <p class="tips">💛 Tips are appreciated, but never expected. Thank you for supporting GLOWZ Jerky!</p>
+    </div>
+    <form class="contact__form" id="contactForm">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" rows="5" placeholder="Ask us anything…" required></textarea>
+      <button class="btn btn--lava btn--block" type="submit">Send message</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer__logo"><span class="logo__glowz">GLOWZ</span><span class="logo__flower">🌺</span><span class="logo__jerky">JERKY</span></div>
+  <p class="footer__aloha">Made in Hawaiʻi with Aloha! 🤙</p>
+  <p class="footer__small">© <span id="year"></span> GLOWZ Jerky · glowzjerky.com · Mahalo for supporting local!</p>
+</footer>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Your cart" aria-hidden="true">
+  <div class="drawer__head">
+    <h3>Your bag 🛍️</h3>
+    <button class="drawer__x" id="drawerClose" aria-label="Close cart">✕</button>
+  </div>
+  <div class="drawer__body">
+    <ul class="cart-list" id="cartList"></ul>
+    <div class="cart-empty" id="cartEmpty">
+      <p>Your bag is empty… for now. 👀</p>
+      <a href="#shop" class="btn btn--lava btn--sm" data-close>Build a bag</a>
+    </div>
+
+    <form id="checkout" class="checkout">
+      <label class="toggle">
+        <input type="checkbox" id="memberToggle">
+        <span>I'm a GLOWZ member <small>(unlocks mix &amp; match discounts)</small></span>
+      </label>
+
+      <fieldset>
+        <legend>How do you want it?</legend>
+        <label class="chip"><input type="radio" name="ship" value="pickup" checked><span>🤙 Pickup</span></label>
+        <label class="chip"><input type="radio" name="ship" value="delivery"><span>🏝️ Oʻahu delivery</span></label>
+        <label class="chip"><input type="radio" name="ship" value="shipping"><span>📦 USA shipping</span></label>
+        <p class="note" id="shipNote"></p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Pay on pickup / delivery with</legend>
+        <label class="chip"><input type="radio" name="pay" value="Cash" checked><span>Cash</span></label>
+        <label class="chip"><input type="radio" name="pay" value="Venmo"><span>Venmo</span></label>
+        <label class="chip"><input type="radio" name="pay" value="Cash App"><span>Cash App</span></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Add a tip? <small>(never expected)</small></legend>
+        <label class="chip"><input type="radio" name="tip" value="0" checked><span>No tip</span></label>
+        <label class="chip"><input type="radio" name="tip" value="3"><span>$3</span></label>
+        <label class="chip"><input type="radio" name="tip" value="5"><span>$5</span></label>
+        <label class="chip"><input type="radio" name="tip" value="10"><span>$10</span></label>
+      </fieldset>
+
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="text" name="contact" placeholder="Phone or email" required>
+      <input type="text" name="address" id="addressField" placeholder="Delivery / shipping address" hidden>
+
+      <div class="totals" id="totals"></div>
+      <p class="note">⏱️ Made-to-order items take ~1–2 weeks. No payment needed now.</p>
+      <button type="submit" class="btn btn--lava btn--block">Place order</button>
+    </form>
+  </div>
+</aside>
+
+<!-- ============ CONFIRMATION ============ -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal__card">
+    <div class="modal__shaka">🤙</div>
+    <h3>Mahalo! Order received.</h3>
+    <p class="modal__num">Order <b id="orderNum"></b></p>
+    <div id="orderSummary" class="modal__summary"></div>
+    <p class="note">We'll reach out to confirm. Made-to-order jerky is ready in about 1–2 weeks.</p>
+    <button class="btn btn--lava" id="modalClose">Shoots!</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
