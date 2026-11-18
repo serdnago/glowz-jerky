@@ -157,7 +157,9 @@ function calc() {
     else { shipLine = "Quoted"; shipNote = `Add ${FREE_SHIPPING_MIN - credits} more bag${FREE_SHIPPING_MIN - credits > 1 ? "s" : ""} for free USA shipping. Otherwise we'll quote shipping.`; }
   }
 
-  const tip = Number(radio("tip"));
+  const tip = radio("tip") === "custom"
+    ? Math.max(0, Math.round(Number($("#tipCustom").value) * 100) / 100 || 0)
+    : Number(radio("tip"));
   const total = subtotal - discount + tip;
   return { subtotal, credits, bags, largeSavings, eligible, member, discount, ship, shipLine, shipNote, tip, total };
 }
@@ -188,6 +190,9 @@ function renderCart() {
   $("#shipNote").textContent = t.shipNote;
   $("#addressField").hidden = t.ship === "pickup";
   $("#addressField").required = t.ship !== "pickup";
+  const customTip = radio("tip") === "custom";
+  $("#tipCustomWrap").hidden = !customTip;
+  $("#tipCustom").required = customTip;
 
   let promoRow = "";
   if (t.discount) promoRow = `<div class="save"><span>${t.eligible.label}</span><span>−${money(t.discount)}</span></div>`;
@@ -212,7 +217,11 @@ $("#cartList").addEventListener("click", e => {
   if (b.dataset.rm) cart.splice(b.dataset.rm, 1);
   renderCart();
 });
-$("#checkout").addEventListener("change", renderCart);
+$("#checkout").addEventListener("change", e => {
+  renderCart();
+  if (e.target.name === "tip" && e.target.value === "custom") $("#tipCustom").focus();
+});
+$("#tipCustom").addEventListener("input", renderCart);
 
 function openDrawer(on) {
   $("#drawer").classList.toggle("is-on", on);

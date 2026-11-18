@@ -495,6 +495,14 @@ input, select, textarea { font: inherit; }
   box-shadow: var(--shadow); display: grid; gap: 12px;
 }
 .review-form h3 { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: 1.6rem; margin: 0; }
+.tip-custom {
+  flex-basis: 100%; display: flex; align-items: center; gap: 8px;
+  background: #fff; border: 2px solid var(--lava); border-radius: 12px; padding: 0 0 0 14px;
+}
+.tip-custom[hidden] { display: none; }
+.tip-custom span { font-weight: 700; font-size: 1.1rem; color: var(--lava); }
+.tip-custom input { flex: 1; min-width: 0; border: 0; background: transparent; padding: 12px 12px 12px 0; color: var(--ink); }
+.tip-custom input:focus { outline: none; }
 input[type=text], input[type=email], select, textarea {
   width: 100%; padding: 13px 15px; border-radius: 12px;
   border: 2px solid var(--kraft); background: var(--cream); color: var(--ink);

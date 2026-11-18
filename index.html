@@ -415,6 +415,11 @@
         <label class="chip"><input type="radio" name="tip" value="3"><span>$3</span></label>
         <label class="chip"><input type="radio" name="tip" value="5"><span>$5</span></label>
         <label class="chip"><input type="radio" name="tip" value="10"><span>$10</span></label>
+        <label class="chip"><input type="radio" name="tip" value="custom"><span>✏️ Custom</span></label>
+        <label class="tip-custom" id="tipCustomWrap" hidden>
+          <span>$</span>
+          <input type="number" id="tipCustom" min="1" step="any" inputmode="decimal" placeholder="Any amount, $1 and up 🚀">
+        </label>
       </fieldset>
 
       <input type="text" name="name" placeholder="Your name" required>
