@@ -7,9 +7,9 @@ const SIZES = {
 };
 
 const FLAVORS = [
-  { name: "Kiawe Smoke",   desc: "Island wood smoke",     tag: "#1 Fave", health: true },
-  { name: "Teriyaki",      desc: "The family original",   tag: "#2 Fave", health: true },
-  { name: "Korean BBQ",    desc: "Garlic, ginger, sesame", tag: "#3 Fave", health: false },
+  { name: "Korean BBQ",    desc: "Garlic, ginger, sesame", tag: "#1 Fave", health: false },
+  { name: "Kiawe Smoke",   desc: "Island wood smoke",     tag: "#2 Fave", health: true },
+  { name: "Teriyaki",      desc: "The family original",   tag: "#3 Fave", health: true },
   { name: "Original",      desc: "Classic & savory",       health: false },
   { name: "Hickory Smoke", desc: "Bold mainland smoke",    health: true },
   { name: "Char Siu",      desc: "Sweet & sticky",         health: false },
