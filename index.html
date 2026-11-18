@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Kaushan+Script&family=Permanent+Marker&display=swap" rel="stylesheet">
   <!-- Bump ?v= on every update so browsers fetch the new files -->
-  <link rel="stylesheet" href="styles.css?v=20261118">
+  <link rel="stylesheet" href="styles.css?v=20261118b">
 </head>
 <body>
 
@@ -179,6 +179,11 @@
             <label class="chip"><input type="radio" name="heat" value="Black Pepper"><span>🌶️ Black Pepper</span></label>
             <label class="chip"><input type="radio" name="heat" value="Ghost Pepper"><span>🔥 Ghost Pepper</span></label>
             <label class="chip chip--reaper"><input type="radio" name="heat" value="Carolina Reaper"><span>🔥🔥 Carolina Reaper</span></label>
+          </div>
+          <div class="heat-scale" id="heatScale" hidden>
+            <p class="heat-scale__label">How hot? <b><span id="heatLevelVal">5</span>/10</b> — <span id="heatLevelName"></span></p>
+            <div class="heat-scale__dots" id="heatDots" role="radiogroup" aria-label="Heat level from 1 to 10"></div>
+            <div class="heat-scale__ends"><span>1 · a little tingle</span><span>10 · pure lava 🌋</span></div>
           </div>
           <div class="heat-meter" aria-hidden="true"><div class="heat-meter__fill" id="heatFill"></div></div>
         </div>
@@ -451,6 +456,6 @@
 
 <div class="toast" id="toast"></div>
 
-<script src="app.js?v=20261118"></script>
+<script src="app.js?v=20261118b"></script>
 </body>
 </html>

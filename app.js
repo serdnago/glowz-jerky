@@ -65,8 +65,22 @@ function renderFlavors() {
     </button>`).join("");
 }
 
+// Ghost Pepper and Carolina Reaper get a 1–10 heat level
+const SCALED_HEAT = ["Ghost Pepper", "Carolina Reaper"];
+const HEAT_NAMES = ["", "A little tingle", "A little tingle", "Warming up", "Warming up", "Sweating now",
+  "Sweating now", "Grab some water 🥵", "Grab some water 🥵", "Pure lava 🌋", "Pure lava 🌋"];
+$("#heatDots").innerHTML = Array.from({ length: 10 }, (_, i) => `
+  <label class="heat-dot" style="--i:${i}">
+    <input type="radio" name="heatLevel" value="${i + 1}" ${i === 4 ? "checked" : ""}>
+    <span>${i + 1}</span>
+  </label>`).join("");
+
+function heatText(heat) {
+  return SCALED_HEAT.includes(heat) ? `${heat} ${radio("heatLevel")}/10` : heat;
+}
+
 function modsText(heat, health) {
-  return [heat, health].filter(Boolean).join(" · ");
+  return [heatText(heat), health].filter(Boolean).join(" · ");
 }
 
 function updatePreview() {
@@ -85,7 +99,13 @@ function updatePreview() {
   $("#pvMods").textContent = modsText(heat, health) || "Classic";
   $("#pvSize").textContent = size.oz;
   $("#bagPreview").classList.toggle("is-large", radio("size") === "large");
-  $("#heatFill").style.width = HEAT_LEVEL[heat] + "%";
+  const scaled = SCALED_HEAT.includes(heat);
+  const level = Number(radio("heatLevel"));
+  $("#heatScale").hidden = !scaled;
+  $("#heatLevelVal").textContent = level;
+  $("#heatLevelName").textContent = HEAT_NAMES[level];
+  $$(".heat-dot").forEach((d, i) => d.classList.toggle("is-lit", i < level));
+  $("#heatFill").style.width = (scaled ? level * 10 : HEAT_LEVEL[heat]) + "%";
   $("#qtyVal").textContent = current.qty;
   $("#addPrice").textContent = money(size.price * current.qty);
 }
@@ -101,7 +121,7 @@ $("#flavorGrid").addEventListener("click", e => {
   current.flavor = btn.dataset.flavor;
   renderFlavors(); updatePreview(); popBag();
 });
-$$('input[name="size"], input[name="heat"], input[name="health"]').forEach(i =>
+$$('input[name="size"], input[name="heat"], input[name="heatLevel"], input[name="health"]').forEach(i =>
   i.addEventListener("change", () => { updatePreview(); popBag(); }));
 $("#qtyMinus").addEventListener("click", () => { current.qty = Math.max(1, current.qty - 1); updatePreview(); });
 $("#qtyPlus").addEventListener("click", () => { current.qty = Math.min(50, current.qty + 1); updatePreview(); });
