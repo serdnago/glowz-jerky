@@ -3,7 +3,7 @@ const EMAIL = "glowm6@proton.me";
 
 const SIZES = {
   regular: { label: "Regular", oz: "4.5 oz", price: 25, credits: 1 },
-  large:   { label: "Large",   oz: "13.5 oz", price: 70, credits: 3 },
+  large:   { label: "Mega",    oz: "13.5 oz", price: 70, credits: 3 },
 };
 
 const FLAVORS = [
@@ -202,7 +202,7 @@ function renderCart() {
 
   $("#totals").innerHTML = `
     <div><span>Subtotal (${t.credits} bag credit${t.credits > 1 ? "s" : ""})</span><span>${money(t.subtotal)}</span></div>
-    ${t.largeSavings ? `<div class="save"><span>Large-bag savings included</span><span>${money(t.largeSavings)}</span></div>` : ""}
+    ${t.largeSavings ? `<div class="save"><span>Mega-bag savings included</span><span>${money(t.largeSavings)}</span></div>` : ""}
     ${promoRow}
     <div><span>${{ pickup: "Pickup", delivery: "Oʻahu delivery", shipping: "USA shipping" }[t.ship]}</span><span>${t.shipLine}</span></div>
     ${t.tip ? `<div><span>Tip — mahalo! 💛</span><span>${money(t.tip)}</span></div>` : ""}
